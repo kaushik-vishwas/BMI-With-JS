@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="bootstrap.js"></script>
+    <style>
+        .container{
+            
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .card-header{
+            background-color:  rgb(98, 32, 160);
+            color: aliceblue;
+            font-size: large;
+        }
+        .card-footer{
+            background-color: rgb(98, 32, 160);
+            color: aliceblue;
+            font-size: large;
+            font-style: italic;
+        }
+        .card{
+            background-color: rgb(46, 25, 25);
+        }
+        .card-footer{
+            color: aliceblue;
+            font-size: large;
+        }
+        #notification{
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            color: rgb(50, 243, 185);
+        }
+        #label{
+            color: aliceblue;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center"> Body Mass Index </div>
+            <div class="card-body">
+                <form class="w-50 m-auto" onsubmit="return false">
+                    <div class="form-group">
+                        <label id="label"> Weight: </label>
+                        <input type="number" name=""  placeholder="Weight in Kilogram" required id="weight" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label id="label"> Height: </label>
+                        <input type="text" name=""  placeholder="Height in Feet" required id="height" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label id="label"> Your BMI is: </label>
+                        <input type="number" name="" required id="showvalue" class="form-control">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-success text-white" onclick="getbmivalue()"> Check BMI </button>
+                    </div>
+                </form>
+                <div id="notification">
+                    <h3 class="text-info"></h3>
+                </div>
+            </div>
+            <div class="card-footer text-center"> A Healthy BMI ranges between 19 to 25 </div>
+        </div>
+
+    </div>
+<script src="jsfile.js"></script>  
+</body>
+</html>
